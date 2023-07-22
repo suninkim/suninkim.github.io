@@ -8,8 +8,8 @@
 # Site settings
 title: Sunin Archive
 description: '' # write a nice description for your blog
-baseurl: '/cayman-blog' # the subpath of your site, e.g. /blog
-url: 'https://suninkim.github.io/' # the base hostname & protocol for your site http://www.example.com
+baseurl: '' # the subpath of your site, e.g. /blog
+url: 'https://suninkim.github.io' # the base hostname & protocol for your site http://www.example.com
 # google_analytics: 'UA-XXXXXX-X'
 twitter_username: 'twitter_username'
 
