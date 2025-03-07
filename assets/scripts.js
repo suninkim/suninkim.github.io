@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const resultDiv = document.getElementById("result");
     const shuffleBtn = document.getElementById("shuffle-btn");
     const resetBtn = document.getElementById("reset-btn");
-  
+
     if (!nameList || !shuffleBtn || !resultDiv || !resetBtn) {
         console.error("게임 UI 요소를 찾을 수 없음!");
         return;
@@ -22,9 +22,11 @@ document.addEventListener("DOMContentLoaded", function () {
             let btn = document.createElement("button");
             btn.innerText = name;
             btn.classList.add("name-btn");
-            btn.onclick = () => toggleSelection(name, btn);
+            btn.onclick = () => toggleSelection(name);
             nameList.appendChild(btn);
         });
+
+        updateSelectionUI(); // 초기 UI 업데이트
     }
 
     function toggleSelection(name) {
@@ -35,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         updateSelectionUI();
     }
-    
+
     function updateSelectionUI() {
         let buttons = document.querySelectorAll(".name-btn");
         buttons.forEach(btn => {
@@ -57,17 +59,19 @@ document.addEventListener("DOMContentLoaded", function () {
         let group1 = shuffled.slice(0, 5);
         let group2 = shuffled.slice(5, 10);
 
-        resultDiv.innerHTML = `<h3>잘생긴팀</h3><p>${group1.join(", ")}</p>
-                               <h3>못생긴팀</h3><p>${group2.join(", ")}</p>`;
+        resultDiv.innerHTML = `<h3>잘생긴 팀</h3><p>${group1.join(", ")}</p>
+                               <h3>못생긴 팀</h3><p>${group2.join(", ")}</p>`;
     }
-    
+
     function resetSelection() {
         selectedNames = [];
         renderNames(); // 초기화 후 다시 렌더링
         resultDiv.innerHTML = "";
+        updateSelectionUI(); // 버튼 UI 초기화
     }
 
     shuffleBtn.addEventListener("click", shuffleGroups);
     resetBtn.addEventListener("click", resetSelection);
+    
     renderNames();
 });
