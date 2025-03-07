@@ -17,16 +17,15 @@ document.addEventListener("DOMContentLoaded", function () {
     let selectedNames = [];
 
     function renderNames() {
-        nameList.innerHTML = "";
+        nameList.innerHTML = "";  // 🔥 기존 버튼을 모두 지우고 새로 추가
         names.forEach(name => {
             let btn = document.createElement("button");
             btn.innerText = name;
             btn.classList.add("name-btn");
-            btn.onclick = () => toggleSelection(name);
+            btn.onclick = () => toggleSelection(name, btn);
             nameList.appendChild(btn);
         });
-
-        updateSelectionUI(); // 초기 UI 업데이트
+        updateSelectionUI();  // 🔥 추가된 버튼의 UI를 업데이트
     }
 
     function toggleSelection(name) {
@@ -65,9 +64,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function resetSelection() {
         selectedNames = [];
-        renderNames(); // 초기화 후 다시 렌더링
+        nameList.innerHTML = "";  // 🔥 기존 버튼 삭제 후 다시 생성
+        renderNames(); // 🔥 초기화 후 다시 렌더링
         resultDiv.innerHTML = "";
-        updateSelectionUI(); // 버튼 UI 초기화
     }
 
     shuffleBtn.addEventListener("click", shuffleGroups);

@@ -23,10 +23,11 @@
   </section>
 
   {% include footer.html %}
+
+  <!-- 🔥 수정: scripts.html을 </body> 태그 안으로 이동 -->
   <script src="{{ site.baseurl }}/assets/scripts.js"></script>
+  {% include scripts.html %}
 
 </body>
-
-{% include scripts.html %}
 
 </html>
