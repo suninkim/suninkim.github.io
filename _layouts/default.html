@@ -10,11 +10,19 @@
   <section class="main-content">
     <div class="wrapper">
       {{ content }}
-    </div>
-    </div>
 
-    {% include footer.html %}
-    <script src="{{ site.baseurl }}/assets/scripts.js"></script>
+      <!-- 게임 UI 추가 -->
+      <div id="game">
+        <h2>10명을 선택하고 그룹을 나누세요!</h2>
+        <div id="name-list"></div>
+        <button id="shuffle-btn">랜덤 그룹 나누기</button>
+        <div id="result"></div>
+      </div>
+    </div>
+  </section>
+
+  {% include footer.html %}
+  <script src="{{ site.baseurl }}/assets/scripts.js"></script>
 
 </body>
 
