@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  {% include head.html %}
+{% include head.html %}
 
-  <body>
+<body>
 
-    {% include header.html %}
+  {% include header.html %}
 
-    <section class="main-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
+  <section class="main-content">
+    <div class="wrapper">
+      {{ content }}
+    </div>
     </div>
 
     {% include footer.html %}
+    <script src="{{ site.baseurl }}/assets/scripts.js"></script>
 
+</body>
 
-  </body>
-
-    {% include scripts.html %}
+{% include scripts.html %}
 
 </html>

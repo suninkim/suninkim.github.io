@@ -1,10 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const names = ["김민수", "이서연", "박지훈", "정예린", "최도영", "한지우", 
+    console.log("JavaScript 실행됨!"); // 디버깅 로그 추가
+
+    const names = ["김민수", "이서연", "박지훈", "정예린", "최도영", "한지우",
                    "강민호", "윤아린", "서준호", "배현우", "신유진", "오태경"];
 
     const nameList = document.getElementById("name-list");
     const resultDiv = document.getElementById("result");
     const shuffleBtn = document.getElementById("shuffle-btn");
+
+    if (!nameList || !shuffleBtn || !resultDiv) {
+        console.error("게임 UI 요소를 찾을 수 없음!");
+        return;
+    }
 
     let selectedNames = [];
 
