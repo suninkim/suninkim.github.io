@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("JavaScript 실행됨!"); // 디버깅 로그 추가
 
     const names = ["궁준기", "항상침착하게", "건강행복사랑만사형통축복", "임재롱", "카리스마수학쌤", "이에라냐",
-                   "싱춘형", "지윤이어서오고", "캐멋진간지남", "Doooooly", "평화용기사랑승리", "추가인원"];
+                   "싱춘형", "지윤이어서오고", "캐멋진간지남", "Doooooooooooooly", "평화용기사랑승리", "Pure호영","이건시작일뿐이야", "추가인원"];
 
     const nameList = document.getElementById("name-list");
     const resultDiv = document.getElementById("result");
