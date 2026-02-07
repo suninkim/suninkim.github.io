@@ -9,16 +9,107 @@
 
   <section class="main-content">
     <div class="wrapper">
-      {{ content }}
+        <section class="about">
+          <div class="about-flex">
+            <div class="about-text">
+              <p class="about-summary">My goal is to integrate robots into everyday life, enabling people to lead enriched lives by offloading tedious tasks and enjoying meaningful interactions with robots.</p>
+              <p class="about-desc">I earned my M.S. degree focusing on reinforcement learning for robotics, and at Naver Labs I worked on research projects including AMBIDEX, the Garo robot, and humanoid systems. I’m currently at CarbonSix, researching robotic manipulation to push the boundaries of what robots can do.</p>
+              <p class="about-contact">
+                <a href="/assets/SuninKim_CV.pdf" target="_blank">CV</a> /
+                <a href="mailto:suninkim0@gmail.com">suninkim0@gmail.com</a> /
+                <a href="https://www.linkedin.com/in/%EC%84%A0%EC%9D%B8-%EA%B9%80-33a107188/" target="_blank">
+                  <i class="fa fa-linkedin"></i> Sunin Kim
+                </a>
+              </p>
+            </div>
+            <div class="about-photo">
+              <img src="/img/sunin.jpg" alt="Sunin Kim" style="width:160px;height:160px;border-radius:50%;object-fit:cover;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+            </div>
+          </div>
+        </section>
+        {{ content }}
+        <section class="publications">
+          <h2>Publications</h2>
+          <ul class="publication-list">
+            <li class="publication-item">
+              <div class="publication-thumb">
+                <img src="/img/ambidex.gif" alt="ICRA 2023" style="width:240px;height:200px;border-radius:8px;object-fit:contain;">
+              </div>
+              <div class="publication-info">
+                <div class="pub-title"><a href="https://safe-skill.github.io/" target="_blank">Safety-aware unsupervised skill discovery</a></div>
+                <div class="pub-authors"><strong>Sunin Kim*</strong>, Jaewoon Kwon*, Taeyoon Lee*, Younghyo Park*, Julien Perez</div>
+                <div class="pub-venue">International Conference on Robotics and Automation (ICRA), 2023</div>
+                <div class="pub-note">* Equal Contribution, listed in alphabetical order.</div>
+              </div>
+            </li>
+            <li class="publication-item">
+              <div class="publication-thumb">
+                <img src="/img/offline_rl.gif" alt="ISR 2022" style="width:240px;height:200px;border-radius:8px;object-fit:contain;">
+              </div>
+              <div class="publication-info">
+                <div class="pub-title"><a href="https://link.springer.com/article/10.1007/s11370-021-00402-6" target="_blank">Object manipulation system based on image-based reinforcement learning</a></div>
+                <div class="pub-authors"><strong>Sunin Kim</strong>, HyunJun Jo, Jae-Bok Song</div>
+                <div class="pub-venue">Intelligent Service Robotics (ISR), 2022</div>
+              </div>
+            </li>
+            <li class="publication-item">
+              <div class="publication-thumb">
+                <img src="/img/key_point_net.jpg" alt="KSME 2021" style="width:240px;height:200px;border-radius:8px;object-fit:contain;">
+              </div>
+              <div class="publication-info">
+                <div class="pub-title">Generalized Object Manipulation Based on Keypoints Detection Network</div>
+                <div class="pub-authors"><strong>Sunin Kim</strong>, HyunJun Jo, Jae-Bok Song</div>
+                <div class="pub-venue">The Korean Society of Mechanical Engineers (KSME) Conference, 2021</div>
+              </div>
+            </li>
+            <li class="publication-item">
+              <div class="publication-thumb">
+                <img src="/img/obj_pose.jpg" alt="RGB Deep Learning" style="width:240px;height:200px;border-radius:8px;object-fit:contain;">
+              </div>
+              <div class="publication-info">
+                <div class="pub-title">Pose Estimation using RGB-based Deep Learning and Point</div>
+                <div class="pub-authors"><strong>Sunin Kim</strong>, Jae-Bok Song</div>
+                <div class="pub-venue"> The Korean Society of Mechanical Engineers(KSME) Conference, 2020.</div>
+              </div>
+            </li>
+          </ul>
+        </section>
 
-      <!-- 게임 UI 추가 -->
-      <div id="game">
-        <h2>소환사를 선택해주세요!</h2>
-        <div id="name-list" class="name-container"></div>
-        <button id="shuffle-btn">운명 결정</button>
-        <button id="reset-btn">초기화</button>
-        <div id="result"></div>
-      </div>
+        <section class="projects">
+          <h2>Projects</h2>
+          <ul class="project-list">
+            <li class="project-item">
+              <div class="project-thumb">
+                <img src="/img/navibot.gif" alt="Locomotion and Manipulation" style="width:240px;height:200px;border-radius:12px;object-fit:contain;">
+              </div>
+              <div class="project-info">
+                <div class="proj-title">Locomotion and Manipulation</div>
+                <div class="proj-period">Feb. 2025 - Oct. 2025</div>
+                <div class="proj-desc">Learning-based control for embodied robots</div>
+              </div>
+            </li>
+            <li class="project-item">
+              <div class="project-thumb">
+                <img src="/img/ally.png" alt="2nDC Robot" style="width:240px;height:200px;border-radius:12px;object-fit:contain;">
+              </div>
+              <div class="project-info">
+                <div class="proj-title">2nDC Robot</div>
+                <div class="proj-period">Jul. 2022 - Feb. 2025</div>
+                <div class="proj-desc">Mobile robots for data center</div>
+              </div>
+            </li>
+            <li class="project-item">
+              <div class="project-thumb">
+                <img src="/img/ambidex_proj.jpg" alt="AMBIDEX" style="width:240px;height:200px;border-radius:12px;object-fit:contain;">
+              </div>
+              <div class="project-info">
+                <div class="proj-title">AMBIDEX</div>
+                <div class="proj-period">Feb. 2022 - Jul. 2022</div>
+                <div class="proj-desc">Cable-driven light weight bi-manipulation robot</div>
+              </div>
+            </li>
+          </ul>
+        </section>
     </div>
   </section>
 
