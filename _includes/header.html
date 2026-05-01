@@ -1,1 +1,5 @@
-
+{% if page.url != "/" %}
+<a class="home-btn" href="{{ site.baseurl }}/" aria-label="Home">
+  <i class="fa fa-home" aria-hidden="true"></i> Home
+</a>
+{% endif %}

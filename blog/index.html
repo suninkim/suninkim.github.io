@@ -1,0 +1,63 @@
+---
+layout: default
+title: Blog
+---
+
+<div class="blog-layout">
+  <aside class="blog-sidebar">
+    <div class="about-card">
+      <img class="about-card-photo" src="/img/sunin.jpg" alt="Sunin Kim">
+      <h3 class="about-card-name">Sunin Kim</h3>
+      <p class="about-card-summary">
+        Roboticist working on robotic manipulation at CarbonSix.
+        Previously at Naver Labs (AMBIDEX, Garo, humanoids); M.S. in
+        reinforcement learning for robotics.
+      </p>
+      <p class="about-card-desc">
+        Writing monthly notes on robotics, AI, and what I learn building them.
+      </p>
+      <ul class="about-card-links">
+        <li><a href="/assets/SuninKim_CV.pdf" target="_blank">CV</a></li>
+        <li><a href="mailto:suninkim0@gmail.com">Email</a></li>
+        <li><a href="https://www.linkedin.com/in/%EC%84%A0%EC%9D%B8-%EA%B9%80-33a107188/" target="_blank">LinkedIn</a></li>
+        <li><a href="{{ site.baseurl }}/">Home</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <section class="blog-main">
+    <h1>Blog</h1>
+    <p class="blog-tagline">Monthly notes on robotics, AI, and what I learn building them.</p>
+
+    <ul class="post-card-list">
+      {% for post in paginator.posts %}
+      {% assign thumb = post.image | default: "/img/cover.jpg" %}
+      <li class="post-card">
+        <a class="post-card-link" href="{{ post.url | prepend: site.baseurl }}">
+          <div class="post-card-thumb">
+            <img src="{{ thumb }}" alt="{{ post.title }}">
+          </div>
+          <div class="post-card-body">
+            <h2 class="post-card-title">{{ post.title }}</h2>
+            <p class="post-card-meta">
+              <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+            </p>
+            <p class="post-card-excerpt">
+              {% if post.excerpt %}{{ post.excerpt | strip_html | truncate: 180 }}{% endif %}
+            </p>
+          </div>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+
+    <div class="pagination" style="text-align: center;">
+      {% if paginator.next_page %}
+        <h3><a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="next">- older posts -</a></h3>
+      {% endif %}
+      {% if paginator.previous_page %}
+        <h3><a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="previous">- newer posts -</a></h3>
+      {% endif %}
+    </div>
+  </section>
+</div>

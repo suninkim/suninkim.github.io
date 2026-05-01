@@ -3,12 +3,13 @@
 
 {% include head.html %}
 
-<body>
+<body class="{% if page.url == '/' %}home{% else %}interior{% endif %}">
 
   {% include header.html %}
 
   <section class="main-content">
     <div class="wrapper">
+        {% if page.url == "/" %}
         <section class="about">
           <div class="about-flex">
             <div class="about-text">
@@ -19,7 +20,8 @@
                 <a href="mailto:suninkim0@gmail.com">suninkim0@gmail.com</a> /
                 <a href="https://www.linkedin.com/in/%EC%84%A0%EC%9D%B8-%EA%B9%80-33a107188/" target="_blank">
                   <i class="fa fa-linkedin"></i> Sunin Kim
-                </a>
+                </a> /
+                <a href="{{ site.baseurl }}/blog">Blog</a>
               </p>
             </div>
             <div class="about-photo">
@@ -27,7 +29,9 @@
             </div>
           </div>
         </section>
+        {% endif %}
         {{ content }}
+        {% if page.url == "/" %}
         <section class="publications">
           <h2>Publications</h2>
           <ul class="publication-list">
@@ -110,13 +114,12 @@
             </li>
           </ul>
         </section>
+        {% endif %}
     </div>
   </section>
 
   {% include footer.html %}
 
-  <!-- 🔥 수정: scripts.html을 </body> 태그 안으로 이동 -->
-  <script src="{{ site.baseurl }}/assets/scripts.js"></script>
   {% include scripts.html %}
 
 </body>

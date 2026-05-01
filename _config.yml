@@ -16,8 +16,9 @@ twitter_username: 'twitter_username'
 # Build settings
 markdown: kramdown
 
-permalink: '/:title/'
+permalink: '/blog/:title/'
 
 gems: [jekyll-paginate]
 
 paginate: 10
+paginate_path: "/blog/page:num/"
